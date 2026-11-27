@@ -13,5 +13,5 @@ DESCRIPTION = "Videoları ve ses kayıtlarını internetsiz, yerel yapay zekâ i
 CREATOR = "Demiralp Öztürk"
 CREATOR_ROLE = "Creator"
 GITHUB = "https://github.com/demiralpozturk"
-LINKEDIN = ""  # ör. "https://www.linkedin.com/in/kullanici-adi"
+LINKEDIN = "https://www.linkedin.com/in/demiralp-%C3%B6zt%C3%BCrk/"
 EMAIL = ""     # ör. "ad@ornek.com"

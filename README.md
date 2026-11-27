@@ -6,7 +6,7 @@
 
 <p align="center">
   Videoları ve ses kayıtlarını <b>internetsiz, yerel yapay zekâ</b> ile yazıya döken Windows uygulaması.<br>
-  <sub>Geliştiren: <b>Demiralp Öztürk</b> — Creator · <a href="https://github.com/demiralpozturk">GitHub</a></sub>
+  <sub><b>Creator: Demiralp Öztürk</b> · <a href="https://github.com/demiralpozturk">GitHub</a> · <a href="https://www.linkedin.com/in/demiralp-%C3%B6zt%C3%BCrk/">LinkedIn</a></sub>
 </p>
 
 ---
@@ -68,6 +68,27 @@ powershell -ExecutionPolicy Bypass -File build.ps1 -Kisayol
 Python 3.12, `requirements.txt` ve PyInstaller gerekir. Çıktı: `dist\VideoTranskript\` (onedir) ve
 masaüstünde **Video Transkript** kısayolu. Yapımcı bilgileri (LinkedIn, e-posta) tek yerde: `app_info.py`.
 
+## Proje yapısı
+
+Her dosya tek bir işi yapıyor; GitHub'da istediğin dosyayı açıp adım adım takip edebilirsin.
+
+```text
+video-transkript/
+├── main.py               giriş noktası: arayüzü açar, --selftest ve --ekran-goruntusu komutları
+├── arayuz.py             PySide6 arayüzü: 4 adım, canlı transkript, tema, Hakkında penceresi
+├── motor.py              transkript motoru: ses çözme, model indirme, faster-whisper, çıktılar, devam mantığı
+├── deneme.py             self-test için Windows Türkçe sesiyle deneme kaydı üretir
+├── app_info.py           uygulama adı, sürüm, Creator ve bağlantılar (tek yer)
+├── ikon.py               simgeyi çizer
+├── araclar/ikon_uret.py  assets/icon.png ve icon.ico dosyalarını üretir
+├── assets/               uygulama simgesi
+├── docs/                 README'deki ekran görüntüleri
+├── build.ps1             PyInstaller ile derler, isteğe bağlı masaüstü kısayolu oluşturur
+├── VideoTranskript.spec  PyInstaller paket tanımı
+├── version_info.txt      exe sürüm bilgisi
+└── requirements.txt      bağımlılıklar
+```
+
 | Dosya | Görev |
 |---|---|
 | `motor.py` | Ses çözme, model indirme/yükleme, transkript, çıktı yazma, devam mantığı (arayüzden bağımsız) |
@@ -85,7 +106,9 @@ live transcript → results), drag & drop, batch processing with resume, live pe
 elapsed/remaining time and real-time speed, and exports TXT, timestamped TXT, SRT and VTT. Audio never leaves the
 computer; only the chosen model is downloaded once. Built with PySide6 and packaged with PyInstaller.
 
+**Creator: Demiralp Öztürk** — [GitHub](https://github.com/demiralpozturk) · [LinkedIn](https://www.linkedin.com/in/demiralp-%C3%B6zt%C3%BCrk/)
+
 ---
 
-<sub>© 2026 Demiralp Öztürk — Creator. faster-whisper / CTranslate2 (MIT), OpenAI Whisper modelleri (MIT),
+<sub>© 2026 · Creator: Demiralp Öztürk. faster-whisper / CTranslate2 (MIT), OpenAI Whisper modelleri (MIT),
 Qt for Python (LGPL).</sub>
