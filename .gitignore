@@ -1,0 +1,12 @@
+.venv/
+build/
+dist/
+__pycache__/
+*.pyc
+*.part
+test_cikti/
+models/
+*.log
+*.wav
+*.mp4
+*.mp3
